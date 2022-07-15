@@ -7,6 +7,7 @@
     "start:dev": "parallelshell \"yarn build:watch\" \"yarn start:watch\"",
     "start:watch": "yarn nodemon .",
     "build": "swc src -d dist",
+    "bundle": "npx spack",
     "build:watch": "swc src -w --out-dir dist",
     "clean": "rm -rf dist"
   },

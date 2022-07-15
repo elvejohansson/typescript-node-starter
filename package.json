@@ -1,0 +1,21 @@
+{
+  "name": "typescript-node-starter",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production node .",
+    "start:dev": "parallelshell \"yarn build:watch\" \"yarn start:watch\"",
+    "start:watch": "yarn nodemon .",
+    "build": "swc src -d dist",
+    "build:watch": "swc src -w --out-dir dist",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.215",
+    "@types/node": "^18.0.4",
+    "nodemon": "^2.0.19",
+    "parallelshell": "^3.0.2",
+    "typescript": "^4.7.4"
+  }
+}
